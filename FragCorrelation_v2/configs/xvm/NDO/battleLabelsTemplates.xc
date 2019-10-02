@@ -27,7 +27,7 @@
       "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.total_efficiency"},
       "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
       "x": 235,
-      "y": "{{my-vtype-key!=SPG?-232|-223}}",
+      "y": "{{my-vtype-key!=SPG?-232|-230}}",
       "width": 80,
       "height": "{{my-vtype-key!=SPG?42|60}}",
       "screenVAlign": "bottom",
