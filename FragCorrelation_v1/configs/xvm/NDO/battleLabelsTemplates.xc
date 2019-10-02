@@ -182,7 +182,7 @@
     },
     "high_caliber": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_DAMAGE_CAUSED",
+      "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": false,
@@ -200,7 +200,7 @@
     },
     "avg_damage": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_DAMAGE_CAUSED",
+      "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
