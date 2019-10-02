@@ -126,7 +126,7 @@
     },
     "current_hp_ally": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "ON_PLAYERS_HP_CHANGED",
+      "updateEvent": "PY(ON_UPDATE_HP)",
       "x": -164,
       "y": 15,
       "width": 50,
@@ -141,7 +141,7 @@
     },
     "current_hp_enemy": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "ON_PLAYERS_HP_CHANGED",
+      "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 164,
       "y": 15,
       "width": 50,
@@ -156,7 +156,7 @@
     },
     "panel_hp_team": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "ON_PLAYERS_HP_CHANGED",
+      "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 0,
       "y": 5,
       "width": 380,
@@ -170,7 +170,7 @@
     },
     "high_сaliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "ON_DAMAGE_CAUSED",
+      "updateEvent": "PY(ON_UPDATE_HP)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": false,
