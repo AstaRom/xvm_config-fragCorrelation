@@ -225,7 +225,7 @@
       "textFormat": { "font": "NDO", "size": 19, "color": "0xFCFCFC", "align": "center", "leading": -20 },
       "format": "{{py:thp_show('{{battletype-key}}')=on?<textformat rightMargin='345'><b>{{py:current_hp(0)}}</b></textformat><br/><textformat leftMargin='345'><b>{{py:current_hp(1)}}</b></textformat>}}"
     },
-    "high_сaliber": {
+    "high_caliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
       "updateEvent": "PY(ON_UPDATE_HP)",
       "hotKeyCode": 56,
@@ -241,7 +241,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key=regular?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
+      "format": "{{battletype-key=regular?<b>{{py:high_caliber({{hitlog.dmg-total}})}}</b>}}"
     },
     "avg_damage": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},

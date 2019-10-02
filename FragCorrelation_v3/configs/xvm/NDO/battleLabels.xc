@@ -17,7 +17,7 @@
       ${ "battleLabelsTemplates.xc":"def.score" },
       ${ "battleLabelsTemplates.xc":"def.panel_hp" },
       ${ "battleLabelsTemplates.xc":"def.current_hp" },      
-      ${ "battleLabelsTemplates.xc":"def.high_сaliber" },
+      ${ "battleLabelsTemplates.xc":"def.high_caliber" },
       ${ "battleLabelsTemplates.xc":"def.avg_damage" }
     ]
   }

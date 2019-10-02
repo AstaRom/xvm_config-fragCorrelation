@@ -14,7 +14,7 @@
       ${ "battleLabelsTemplates.xc":"def.info_panel" },
       ${ "battleLabelsTemplates.xc":"def.panel_hp_ally" },
       ${ "battleLabelsTemplates.xc":"def.panel_hp_enemy" },
-      ${ "battleLabelsTemplates.xc":"def.high_сaliber" },
+      ${ "battleLabelsTemplates.xc":"def.high_caliber" },
       ${ "battleLabelsTemplates.xc":"def.avg_damage" }
     ]
   }
