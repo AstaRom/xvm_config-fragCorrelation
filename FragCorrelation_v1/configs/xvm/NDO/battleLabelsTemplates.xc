@@ -12,7 +12,7 @@
       "format": "{{hitlog-header}}\n{{hitlog-body}}"
     },
     "damage_log": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.damage_log"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.damage_log" },
       "updateEvent": "PY(ON_HIT)",
       "x": 235,
       "y": -15,
@@ -24,7 +24,7 @@
       "format": "{{py:xvm.damageLog.dLog}}"
     },
     "total_efficiency": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.total_efficiency"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.total_efficiency" },
       "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
       "x": 235,
       "y": "{{my-vtype-key!=SPG?-232|-230}}",
@@ -36,7 +36,7 @@
       "format": "<font face='NDO' size='20'>&#x005A;</font> {{py:total_blocked}}<br/><font face='NDO' size='20'>&#x005B;</font> {{py:total_assist}}{{my-vtype-key=SPG?<br/><font face='NDO' size='20'>&#x005C;</font> {{py:total_stun}}}}"
     },
     "rt_engine": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_ENGINE_UPDATE)",
       "x": 5,
       "y": -147,
@@ -49,7 +49,7 @@
       "format": "{{py:repairTimeEngine}}"
     },
     "rt_gun": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_GUN_UPDATE)",
       "x": 5,
       "y": -71,
@@ -62,7 +62,7 @@
       "format": "{{py:repairTimeGun}}"
     },
     "rt_turret": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_TURRETROTATOR_UPDATE)",
       "x": 5,
       "y": -33,
@@ -75,7 +75,7 @@
       "format": "{{py:repairTimeTurret}}"
     },
     "rt_complex": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_COMPLEX_UPDATE)",
       "x": 178,
       "y": -147,
@@ -88,7 +88,7 @@
       "format": "{{py:repairTimeComplex}}"
     },
     "rt_surveying": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_SURVEYINGDEVICE_UPDATE)",
       "x": 178,
       "y": -109,
@@ -101,7 +101,7 @@
       "format": "{{py:repairTimeSurveying}}"
     },
     "rt_radio": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.damage_panel.repair_timer"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.damage_panel.repair_timer" },
       "updateEvent": "PY(ON_SURVEYING_UPDATE)",
       "x": 178,
       "y": -71,
@@ -114,7 +114,7 @@
       "format": "{{py:repairTimeSurveying}}"
     },
     "info_panel_bg": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.info_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.info_panel" },
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
@@ -132,7 +132,7 @@
       "shadow": { "enabled": false }
     },
     "info_panel": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.info_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.info_panel" },
       "updateEvent": "PY(ON_INFO_PANEL)",
       "hotKeyCode": 56,
       "onHold": true,
@@ -152,7 +152,7 @@
       "format": "{{py:ipHotKey}}"
     },
     "panel_hp_ally": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": -163,
       "y": 5,
@@ -167,7 +167,7 @@
       "format": "{{py:thp_show('{{battletype-key}}')?<font size='17'><b>{{py:current_hp(0)}}</b></font> <font alpha='#CC'>{{py:max_hp_symbols('&#x0051;')}}</font><br/><font color='{{py:str_replace('{{.colors.system.ally_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(0, '&#x0051;')}}</font>}}"
     },
     "panel_hp_enemy": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 160,
       "y": 5,
@@ -182,7 +182,7 @@
       "format": "{{py:thp_show('{{battletype-key}}')?<font alpha='#CC'>{{py:max_hp_symbols('&#x0052;')}}</font> <font size='17'><b>{{py:current_hp(1)}}</b></font><br/><font color='{{py:str_replace('{{.colors.system.enemy_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(1, '&#x0052;')}}</font>}}"
     },
     "high_caliber": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
       "updateEvent": "PY(ON_UPDATE_HP)",
       "hotKeyCode": 56,
       "onHold": true,
@@ -200,7 +200,7 @@
       "format": "{{battletype-key=regular?<b>{{py:high_caliber({{hitlog.dmg-total}})}}</b>}}"
     },
     "avg_damage": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
       "updateEvent": "ON_DAMAGE_CAUSED",
       "hotKeyCode": 56,
       "onHold": true,
