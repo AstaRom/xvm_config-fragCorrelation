@@ -165,7 +165,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center" },
-      "format": "{{battletype!=event_battles?<img src='cfg://NDO/img/fragCorrelation/frame_hp_team.png' width='376' height='36'>}}"
+      "format": "{{battletype-key!=event_battles?<img src='cfg://NDO/img/fragCorrelation/frame_hp_team.png' width='376' height='36'>}}"
     },
     "current_hp_ally": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -180,7 +180,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype!=event_battles?<b>{{py:current_hp(0)}}</b>}}"
+      "format": "{{battletype-key!=event_battles?<b>{{py:current_hp(0)}}</b>}}"
     },
     "current_hp_enemy": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -195,7 +195,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype!=event_battles?<b>{{py:current_hp(1)}}</b>}}"
+      "format": "{{battletype-key!=event_battles?<b>{{py:current_hp(1)}}</b>}}"
     },
     "panel_hp_team": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -209,7 +209,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center", "leading": -36 },
-      "format": "{{battletype!=event_battles?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
+      "format": "{{battletype-key!=event_battles?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
     },
     "high_сaliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -227,7 +227,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype!=event_battles?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
+      "format": "{{battletype-key!=event_battles?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
     },
     "avg_damage": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -245,7 +245,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype!=event_battles?<b>{{py:avg_damage({{hitlog.dmg-total}})}}</b>}}"
+      "format": "{{battletype-key!=event_battles?<b>{{py:avg_damage({{hitlog.dmg-total}})}}</b>}}"
     }
   }
 }
