@@ -154,50 +154,49 @@
       <br/><textformat tabstops='[5,54,80,105,150,214,246,279]'><font size='0'>.</font><tab>Башня:<tab>{{py:armor_turret_front}}<tab>{{py:armor_turret_side}}<tab>{{py:armor_turret_back}}<tab>Урон:<tab>{{py:shell_damage_1}}<tab>{{py:shell_damage_2}}<tab>{{py:shell_damage_3}}</textformat>
       <br/><textformat tabstops='[5,54,80,105,150,214,246,279]'><font size='0'>.</font><tab>Корпус:<tab>{{py:armor_hull_front}}<tab>{{py:armor_hull_side}}<tab>{{py:armor_hull_back}}<tab>Пробитие:<tab>{{py:shell_power_1}}<tab>{{py:shell_power_2}}<tab>{{py:shell_power_3}}</textformat>"
     },
-    "frame_hp_team": {
+    "frame_hp": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
       "x": 0,
-      "y": 7,
-      "width": 614,
-      "height": 36,
-      "alpha": 80,
+      "y": 5,
+      "width": 380,
+      "height": 40,
+      "alpha": 60,
       "align": "center",
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center" },
-      "format": "{{battletype-key!=event_battles?<img src='cfg://NDO/img/fragCorrelation/frame_hp_team.png' width='610' height='32'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/frame_hp.png' width='376' height='36'>}}"
     },
-    "current_hp_ally": {
+    "score_bg": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "PY(ON_UPDATE_HP)",
-      "x": -170,
-      "y": 14,
-      "width": 50,
-      "height": 24,
+      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "x": 0,
+      "y": 5,
+      "width": 84,
+      "height": 40,
+      "alpha": 35,
+      "align": "center",
+      "screenHAlign": "center",
+      "shadow": { "enabled": false },
+      "textFormat": { "align": "center" },
+      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/score_{{py:score_team_sign}}.png' width='80' height='36'>}}"
+    },
+    "score": {
+      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "x": 0,
+      "y": 8,
+      "width": 80,
+      "height": 35,
       "alpha": 100,
       "align": "center",
       "screenHAlign": "center",
       "antiAliasType": "advanced",
-      "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 3, "strength": 1.2 },
-      "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key!=event_battles?<b>{{py:current_hp(0)}}</b>}}"
+      "shadow": { "enabled": true, "distance": 0, "angle": 0, "color": "0x000000", "alpha": 40, "blur": 3, "strength": 1 },
+      "textFormat": { "font": "$TitleFont", "size": 24, "color": "0xFCFCFC", "align": "center", "leading": -31 },
+      "format": "{{py:thp_show('{{battletype-key}}')=on?<textformat rightMargin='37'>{{py:score_team(0)}}</textformat><br/><textformat leftMargin='38'>{{py:score_team(1)}}</textformat>}}"
     },
-    "current_hp_enemy": {
-      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
-      "updateEvent": "PY(ON_UPDATE_HP)",
-      "x": 170,
-      "y": 14,
-      "width": 50,
-      "height": 24,
-      "alpha": 100,
-      "align": "center",
-      "screenHAlign": "center",
-      "antiAliasType": "advanced",
-      "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 3, "strength": 1.2 },
-      "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key!=event_battles?<b>{{py:current_hp(1)}}</b>}}"
-    },
-    "panel_hp_team": {
+    "panel_hp": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 0,
@@ -209,7 +208,22 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center", "leading": -36 },
-      "format": "{{battletype-key!=event_battles?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
+    },
+    "current_hp": {
+      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "updateEvent": "PY(ON_UPDATE_HP)",
+      "x": 0,
+      "y": 15,
+      "width": 380,
+      "height": 22,
+      "alpha": 75,
+      "align": "center",
+      "screenHAlign": "center",
+      "antiAliasType": "advanced",
+      "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
+      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "leading": -18 },
+      "format": "{{py:thp_show('{{battletype-key}}')=on?<textformat rightMargin='328'><b>{{py:current_hp(0)}}</b></textformat><br/><textformat leftMargin='328'><b>{{py:current_hp(1)}}</b></textformat>}}"
     },
     "high_сaliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -217,8 +231,8 @@
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": false,
-      "x": 250,
-      "y": 7,
+      "x": 0,
+      "y": 42,
       "width": 120,
       "height": 50,
       "alpha": 100,
@@ -227,7 +241,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key!=event_battles?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
+      "format": "{{battletype-key=regular?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
     },
     "avg_damage": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -235,8 +249,8 @@
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
-      "x": 250,
-      "y": 7,
+      "x": 0,
+      "y": 42,
       "width": 120,
       "height": 50,
       "alpha": 100,
@@ -245,7 +259,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key!=event_battles?<b>{{py:avg_damage({{hitlog.dmg-total}})}}</b>}}"
+      "format": "{{battletype-key=regular?<b>{{py:avg_damage({{hitlog.dmg-total}})}}</b>}}"
     }
   }
 }
