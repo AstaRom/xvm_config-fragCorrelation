@@ -162,7 +162,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center" },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/frame_hp.png' width='376' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/frame_hp.png' width='376' height='36'>}}"
     },
     "score_bg": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -176,7 +176,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center" },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/score_{{py:score_team_sign}}.png' width='80' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/score_{{py:score_team_sign}}.png' width='80' height='36'>}}"
     },
     "score": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -191,7 +191,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 0, "angle": 0, "color": "0x000000", "alpha": 40, "blur": 3, "strength": 1 },
       "textFormat": { "font": "$TitleFont", "size": 24, "color": "0xFCFCFC", "align": "center", "leading": -31 },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<textformat rightMargin='37'>{{py:score_team(0)}}</textformat><br/><textformat leftMargin='38'>{{py:score_team(1)}}</textformat>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<textformat rightMargin='37'>{{py:score_team(0)}}</textformat><br/><textformat leftMargin='38'>{{py:score_team(1)}}</textformat>}}"
     },
     "panel_hp": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -205,7 +205,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center", "leading": -36 },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
     },
     "current_hp": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -220,7 +220,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "leading": -18 },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<textformat rightMargin='328'><b>{{py:current_hp(0)}}</b></textformat><br/><textformat leftMargin='328'><b>{{py:current_hp(1)}}</b></textformat>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<textformat rightMargin='328'><b>{{py:current_hp(0)}}</b></textformat><br/><textformat leftMargin='328'><b>{{py:current_hp(1)}}</b></textformat>}}"
     },
     "high_caliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},

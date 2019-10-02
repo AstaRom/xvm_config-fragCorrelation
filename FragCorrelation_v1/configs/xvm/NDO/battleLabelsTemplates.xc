@@ -164,7 +164,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "right", "marginRight": 6, "leading": -19 },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<font size='17'><b>{{py:current_hp(0)}}</b></font> <font alpha='#CC'>{{py:max_hp_symbols('&#x0051;')}}</font><br/><font color='{{py:str_replace('{{.colors.system.ally_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(0, '&#x0051;')}}</font>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<font size='17'><b>{{py:current_hp(0)}}</b></font> <font alpha='#CC'>{{py:max_hp_symbols('&#x0051;')}}</font><br/><font color='{{py:str_replace('{{.colors.system.ally_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(0, '&#x0051;')}}</font>}}"
     },
     "panel_hp_enemy": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
@@ -179,7 +179,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "left", "marginLeft": 2, "leading": -19 },
-      "format": "{{py:thp_show('{{battletype-key}}')=on?<font alpha='#CC'>{{py:max_hp_symbols('&#x0052;')}}</font> <font size='17'><b>{{py:current_hp(1)}}</b></font><br/><font color='{{py:str_replace('{{.colors.system.enemy_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(1, '&#x0052;')}}</font>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<font alpha='#CC'>{{py:max_hp_symbols('&#x0052;')}}</font> <font size='17'><b>{{py:current_hp(1)}}</b></font><br/><font color='{{py:str_replace('{{.colors.system.enemy_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(1, '&#x0052;')}}</font>}}"
     },
     "high_caliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
