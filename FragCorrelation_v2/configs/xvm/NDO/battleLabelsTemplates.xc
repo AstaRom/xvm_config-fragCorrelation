@@ -117,6 +117,12 @@
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
+      "tweensIn": [
+        [ "fromTo", 0.75, { "alpha": 0 }, { "alpha": 1 } ]
+      ],
+      "tweensOut": [
+        [ "fromTo", 0.35, { "alpha": 1 }, { "alpha": 0 } ]
+      ],
       "x": 0,
       "y": -75,
       "width": 320,
@@ -136,6 +142,12 @@
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
+      "tweensIn": [
+        [ "fromTo", 0.75, { "alpha": 0 }, { "alpha": 1 } ]
+      ],
+      "tweensOut": [
+        [ "fromTo", 0.35, { "alpha": 1 }, { "alpha": 0 } ]
+      ],
       "x": 0,
       "y": -75,
       "width": 320,
@@ -175,7 +187,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center" },
-      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/score_{{py:score_team_sign}}.png' width='80' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/score_{{py:score_team_sign}}{{py:color_blind?_cb}}.png' width='80' height='36'>}}"
     },
     "score": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
@@ -204,7 +216,7 @@
       "screenHAlign": "center",
       "shadow": { "enabled": false },
       "textFormat": { "align": "center", "leading": -36 },
-      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
+      "format": "{{py:thp_show('{{battletype-key}}')?<img src='cfg://NDO/img/fragCorrelation/ally_{{py:percent_hp_section(0)}}.png' width='376' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/enemy_{{py:color_blind?cb_}}{{py:percent_hp_section(1)}}.png' width='376' height='36'>}}"
     },
     "current_hp": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
