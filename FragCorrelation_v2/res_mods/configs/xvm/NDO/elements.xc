@@ -89,6 +89,7 @@
           }
         },
         "panelSwitch": {
+          "visible": true,
           "y": 40
         }
       },
