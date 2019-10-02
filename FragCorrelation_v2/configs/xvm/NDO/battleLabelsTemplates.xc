@@ -8,7 +8,7 @@
       "width": 500,
       "height": 1000,
       "shadow": { "enabled": true, "distance": 0, "angle": 0, "color": "0x000000", "alpha": 75, "blur": 2, "strength": 1 },
-      "textFormat": { "font": "$FieldFont", "color": "0xFCFCFC", "size": 15, "align": "left", "leading": 5 },
+      "textFormat": { "font": "$FieldFont", "size": 15, "color": "0xFCFCFC", "align": "left", "leading": 5 },
       "format": "{{hitlog-header}}\n{{hitlog-body}}"
     },
     "info_panel_bg": {
@@ -31,7 +31,7 @@
     },
     "info_panel": {
       "enabled": ${"@settings.xc":"settings.battleLabels.info_panel"},
-      "updateEvent": "ON_TARGET_IN",
+      "updateEvent": "ON_TARGET_IN, ON_TARGET_OUT",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
@@ -46,7 +46,7 @@
       "screenVAlign": "bottom",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 2 }, 
-      "textFormat": { "font": "$FieldFont", "color": "0xFCFCFC", "size": 15, "align": "left", "leading": -14 },
+      "textFormat": { "font": "$FieldFont", "size": 15, "color": "0xFCFCFC", "align": "left", "leading": -14 },
       "format": "<textformat tabstops='[5,150,214]'><font size='0'>.</font><tab><font color='#FF9900'>{{py:vehicle_name()}}</font><tab>КД:<tab>{{py:gun_reload_equip()}} сек</textformat>
       <br/><textformat tabstops='[5,54,150,214,246,279]'><font size='0'>.</font><tab>Обзор:<tab>{{py:vision_radius()}} м<tab>Тип:<tab>{{py:shell_type_1()}}<tab>{{py:shell_type_2()}}<tab>{{py:shell_type_3()}}</textformat>
       <br/><textformat tabstops='[5,54,80,105,150,214,246,279]'><font size='0'>.</font><tab>Башня:<tab>{{py:armor_turret_front()}}<tab>{{py:armor_turret_side()}}<tab>{{py:armor_turret_back()}}<tab>Урон:<tab>{{py:shell_damage_1()}}<tab>{{py:shell_damage_2()}}<tab>{{py:shell_damage_3()}}</textformat>
@@ -77,7 +77,7 @@
       "screenHAlign": "center",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 3, "strength": 1.2 },
-      "textFormat": { "font": "NDO", "color": "0xFCFCFC", "size": 18, "align": "center" },
+      "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "center" },
       "format": "{{battletype!=event_battles?<b>{{py:current_hp(0)}}</b>}}"
     },
     "current_hp_enemy": {
@@ -92,7 +92,7 @@
       "screenHAlign": "center",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 3, "strength": 1.2 },
-      "textFormat": { "font": "NDO", "color": "0xFCFCFC", "size": 18, "align": "center" },
+      "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "center" },
       "format": "{{battletype!=event_battles?<b>{{py:current_hp(1)}}</b>}}"
     },
     "panel_hp_team": {
@@ -112,6 +112,9 @@
     "high_сaliber": {
       "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
       "updateEvent": "ON_DAMAGE_CAUSED",
+      "hotKeyCode": 56,
+      "onHold": true,
+      "visibleOnHotKey": false,
       "x": 250,
       "y": 7,
       "width": 120,
@@ -121,8 +124,26 @@
       "screenHAlign": "center",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
-      "textFormat": { "font": "NDO", "color": "0xFCFCFC", "size": 17, "align": "center" },
-      "format": "{{battletype=regular?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
+      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
+      "format": "{{battletype!=event_battles?<b>{{py:high_сaliber({{hitlog.dmg-total}})}}</b>}}"
+    },
+    "avg_damage": {
+      "enabled": ${"@settings.xc":"settings.battleLabels.total_hp_panel"},
+      "updateEvent": "ON_DAMAGE_CAUSED",
+      "hotKeyCode": 56,
+      "onHold": true,
+      "visibleOnHotKey": true,
+      "x": 250,
+      "y": 7,
+      "width": 120,
+      "height": 50,
+      "alpha": 100,
+      "align": "center",
+      "screenHAlign": "center",
+      "antiAliasType": "advanced",
+      "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
+      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
+      "format": "{{battletype!=event_battles?<b>{{py:avg_damage({{hitlog.dmg-total}})}}</b>}}"
     }
   }
 }
