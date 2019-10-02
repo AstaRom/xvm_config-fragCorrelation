@@ -2,7 +2,7 @@
   "captureBar": {
     "enabled": true,
     "y": 80,
-    "distanceOffset": -25,
+    "distanceOffset": -5,
     "hideProgressBar": false,
     "ally": {
       "сolor": null,
