@@ -6,7 +6,7 @@
       // battleTimer
       
       "battleTimer": {
-        "$delay": 1000,
+        "$delay": 1,
         "y": 10,
         "shadow": {
           "visible": false
