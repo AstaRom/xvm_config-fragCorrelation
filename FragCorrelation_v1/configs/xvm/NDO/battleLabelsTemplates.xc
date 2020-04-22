@@ -13,7 +13,7 @@
     },
     "total_efficiency": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_efficiency" },
-      "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
+      "updateEvent": "PY(ON_EFFICIENCY_UPDATE)",
       "x": "{{py:xvm.hitLog.log.x}}",
       "y": "{{py:math_sub({{py:xvm.hitLog.log.y}}, 20)}}",
       "width": 250,
@@ -176,7 +176,7 @@
     },
     "panel_hp_ally": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "PY(ON_UPDATE_HP)",
+      "updateEvent": "PY(ON_HP_UPDATE)",
       "x": -163,
       "y": 5,
       "width": 240,
@@ -187,11 +187,11 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "right", "marginRight": 6, "leading": -19 },
-      "format": "{{py:thp_show('{{battletype-key}}')?<font size='17'><b>{{py:current_hp(0)}}</b></font> <font alpha='#CC'>{{py:max_hp_symbols('&#x0051;')}}</font><br/><font color='{{py:str_replace('{{.colors.system.ally_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(0, '&#x0051;')}}</font>}}"
+      "format": "{{py:thp_show?<font size='17'><b>{{py:current_hp(0)}}</b></font> <font alpha='#CC'>{{py:max_hp_symbols('&#x0051;')}}</font><br/><font color='{{py:str_replace('{{.colors.system.ally_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(0, '&#x0051;')}}</font>}}"
     },
     "panel_hp_enemy": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "PY(ON_UPDATE_HP)",
+      "updateEvent": "PY(ON_HP_UPDATE)",
       "x": 160,
       "y": 5,
       "width": 240,
@@ -202,16 +202,16 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 18, "color": "0xFCFCFC", "align": "left", "marginLeft": 2, "leading": -19 },
-      "format": "{{py:thp_show('{{battletype-key}}')?<font alpha='#CC'>{{py:max_hp_symbols('&#x0052;')}}</font> <font size='17'><b>{{py:current_hp(1)}}</b></font><br/><font color='{{py:str_replace('{{.colors.system.enemy_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(1, '&#x0052;')}}</font>}}"
+      "format": "{{py:thp_show?<font alpha='#CC'>{{py:max_hp_symbols('&#x0052;')}}</font> <font size='17'><b>{{py:current_hp(1)}}</b></font><br/><font color='{{py:str_replace('{{.colors.system.enemy_alive}}', '0x', '#')}}'>{{py:current_hp_symbols(1, '&#x0052;')}}</font>}}"
     },
     "high_caliber": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
+      "updateEvent": "PY(ON_DAMAGE_UPDATE)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": false,
       "x": 0,
-      "y": 30,
+      "y": 42,
       "width": 120,
       "height": 50,
       "alpha": 100,
@@ -219,17 +219,17 @@
       "screenHAlign": "center",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
-      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key=regular?<b>{{py:high_caliber({{py:total_damage}})}}</b>}}"
+      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "bold": true },
+      "format": "{{py:high_caliber}}"
     },
     "avg_damage": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "PY(ON_TOTAL_EFFICIENCY)",
+      "updateEvent": "PY(ON_DAMAGE_UPDATE)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": true,
       "x": 0,
-      "y": 30,
+      "y": 42,
       "width": 120,
       "height": 50,
       "alpha": 100,
@@ -237,8 +237,8 @@
       "screenHAlign": "center",
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
-      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center" },
-      "format": "{{battletype-key=regular?<b>{{py:avg_damage({{py:total_damage}})}}</b>}}"
+      "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "bold": true },
+      "format": "{{py:avg_damage}}"
     }
   }
 }

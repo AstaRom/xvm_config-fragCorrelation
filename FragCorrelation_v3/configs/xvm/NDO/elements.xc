@@ -48,7 +48,7 @@
       // fragCorrelationBar
 
       "fragCorrelationBar": {
-        "alpha": "{{py:thp_show('{{battletype-key}}')?0|1}}",
+        "alpha": "{{py:thp_show?0|1}}",
         "teamFragsSeparatorField": {
           "y": -2
         }
