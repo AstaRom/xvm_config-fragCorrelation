@@ -176,6 +176,7 @@
     },
     "frame_hp": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
+      "updateEvent": "PY(ON_PREBATTLE)",
       "x": 0,
       "y": 5,
       "width": 434,

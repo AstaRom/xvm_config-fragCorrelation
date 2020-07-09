@@ -48,6 +48,7 @@
       // fragCorrelationBar
 
       "fragCorrelationBar": {
+        "$delay": 100,
         "alpha": "{{py:thp_show?0|1}}",
         "teamFragsSeparatorField": {
           "y": -2
