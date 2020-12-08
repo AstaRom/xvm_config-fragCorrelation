@@ -248,7 +248,7 @@
     },
     "high_caliber": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "PY(ON_DAMAGE_UPDATE)",
+      "updateEvent": "PY(ON_DAMAGE_UPDATE), PY(ON_TEAM_HITS)",
       "hotKeyCode": 56,
       "onHold": true,
       "visibleOnHotKey": false,
@@ -262,7 +262,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "bold": true },
-      "format": "{{py:high_caliber}}"
+      "format": "{{.custom_texts.battleLabels.high_caliber.{{py:check_status(0)}}}}"
     },
     "avg_damage": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
@@ -280,7 +280,7 @@
       "antiAliasType": "advanced",
       "shadow": { "enabled": true, "distance": 1, "angle": 90, "color": "0x000000", "alpha": 80, "blur": 5, "strength": 1.5 },
       "textFormat": { "font": "NDO", "size": 17, "color": "0xFCFCFC", "align": "center", "bold": true },
-      "format": "{{py:avg_damage}}"
+      "format": "{{.custom_texts.battleLabels.avg_damage.{{py:check_status(1)}}}}"
     }
   }
 }
