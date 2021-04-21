@@ -107,12 +107,12 @@
       "align": "center",
       "screenHAlign": "center",
       "shadow": { "enabled": false },
-      "textFormat": { "align": "center", "leading": -36 },
-      "format": "{{py:thp_show?<img src='cfg://NDO/img/fragCorrelation/frame_hp.png' width='430' height='36'><br/><img src='cfg://NDO/img/fragCorrelation/frame_{{py:score_team_sign}}_frags.png' width='430' height='36'>}}"
+      "textFormat": { "align": "center" },
+      "format": "{{py:thp_show?<img src='cfg://NDO/img/fragCorrelation/frame_hp.png' width='430' height='36'>}}"
     },
     "score_bg": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "updateEvent": "PY(ON_SCORE_UPDATE)",
       "x": 0,
       "y": 5,
       "width": 84,
@@ -126,7 +126,7 @@
     },
     "score": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "updateEvent": "PY(ON_SCORE_UPDATE)",
       "x": 0,
       "y": 8,
       "width": 80,
@@ -175,7 +175,7 @@
       "onHold": true,
       "visibleOnHotKey": false,
       "x": 0,
-      "y": 42,
+      "y": 40,
       "width": 120,
       "height": 50,
       "alpha": 100,
@@ -193,7 +193,7 @@
       "onHold": true,
       "visibleOnHotKey": true,
       "x": 0,
-      "y": 42,
+      "y": 40,
       "width": 120,
       "height": 50,
       "alpha": 100,

@@ -112,7 +112,7 @@
     },
     "score_bg": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "updateEvent": "PY(ON_SCORE_UPDATE)",
       "x": 0,
       "y": 5,
       "width": 84,
@@ -126,7 +126,7 @@
     },
     "score": {
       "enabled": ${ "@settings.xc": "settings.battleLabels.total_hp_panel" },
-      "updateEvent": "ON_VEHICLE_DESTROYED",
+      "updateEvent": "PY(ON_SCORE_UPDATE)",
       "x": 0,
       "y": 8,
       "width": 80,
